@@ -1,0 +1,1 @@
+this is a bat, ball and stump game played between user and computer. it has three button bat, ball, stump. if we select any of three and computer will also select the same thing then it's a tie otherwise you will win or lose the game. Rule will be displayed when you will start the game
