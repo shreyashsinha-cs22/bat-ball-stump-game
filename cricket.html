@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Cricket Game</title>
+    <style media="screen">
+      body{
+        text-align: center;
+      }
+      #cric{
+        border-radius: 50px;
+      }
+      .stump,.bat,.ball{
+        background-color: green;
+        border-radius: 10px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1>Bat Ball Stump Game</h1>
+
+    <button type="button" name="button"  class="bat" onclick="
+    b='You have choosen Bat'
+    document.querySelector('#score').innerText=`${b}`
+    console.log(b)
+    computerchoice();
+    if(choice==='Bat'){
+      score.Tie+=1;
+      console.log(score);
+      c=`It's a Tie`
+
+    }
+    else if(choice==='Ball'){
+      score.Win+=1;
+      console.log(score);
+      c='You won'
+
+    }
+    else{
+      score.Lose+=1;
+      console.log(score);
+
+    }
+     document.querySelector('#computerchoice').innerText=`Computer choice is ${choice}`
+     document.querySelector('#result').innerText=` ${c}`
+     document.querySelector('#scoreboard').innerText=`Won: ${score.Win}, Lost: ${score.Lose}, Tie: ${score.Tie}`" ><img src="bat.png" alt="img" height="100" id="cric"></button>
+
+
+    <button type="button" name="button" class="ball" onclick="
+    b='You have choosen Ball'
+    document.querySelector('#score').innerText=`${b}`
+    console.log(b)
+    computerchoice();
+    if(choice==='Bat'){
+      score.Lose+=1;
+      console.log(score);
+      c='You Lost'
+    }
+    else if(choice==='Ball'){
+      score.Tie+=1;
+      console.log(score);
+      c=`It's a Tie`
+    }
+    else{
+      score.Win+=1;
+      console.log(score);
+      c='You Won'
+    }
+    document.querySelector('#computerchoice').innerText=`Computer choice is ${choice}`
+    document.querySelector('#result').innerText=` ${c}`
+    document.querySelector('#scoreboard').innerText=`Won: ${score.Win}, Lost: ${score.Lose}, Tie: ${score.Tie}`
+    "><img src="cricket-ball.jpg" alt="img" height="100" id="cric"></button>
+
+    <button type="button" name="button"  class="stump" onclick="
+    b='you have choosen Stump'
+    document.querySelector('#score').innerText=`${b}`
+    console.log(b)
+    computerchoice();
+    if(choice==='Bat'){
+      score.Win+=1;
+      console.log(score);
+      c='You Won'
+    }
+    else if(choice==='Ball'){
+      score.Lose+=1;
+      console.log(score);
+      c='You Lost'
+    }
+    else{
+      score.Tie+=1;
+      console.log(score);
+      c=`It's a Tie`
+    }
+     document.querySelector('#computerchoice').innerText=`Computer choice is ${choice}`
+     document.querySelector('#result').innerText=` ${c}`
+     document.querySelector('#scoreboard').innerText=`Won: ${score.Win}, Lost: ${score.Lose}, Tie: ${score.Tie}`"><img src="stump.jpg" alt="img" id="cric" height="100" ></button>
+    <p>this game is to be played by 3 button i.e. Bat, Ball, Stump.</p>
+    <p>Rule no. 1
+      <p>
+    If the you choose bat and computer chooses bowl then you won,
+    If you choose bat and computer chooses Stump then you lost, If you chooses bat computer also chooses bat then it's a tie </p>
+    </p>
+    <p>Rule no. 2<p>
+    If the you choose Ball and computer chooses boll then it's a tie,
+    If you choose ball and computer chooses Stump then you won, If you chooses ball and computer chooses bat then you lost </p>
+    </p>
+    <p>Rule no. 3<p>
+    If the you choose stump and computer chooses ball then you Lost,
+    If you choose Stump and Computer chooses Stump then it's a Tie, If you chooses Stump and Computer chooses Bat then you Won </p>
+    </p>
+    <h2 id="score"></h2>
+    <h2 id="computerchoice"></h2>
+    <h2 id="result"></h2>
+    <h2 id="scoreboard"></h2>
+
+    <script>
+      let choice;
+      function computerchoice(){
+        let a=Math.random()*3;
+        if(a>0 && a<=1)
+          choice='Bat'
+        else if(a>1 && a<=2)
+          choice='Ball'
+        else
+          choice='Stump'
+          }
+          let score={
+            Win: 0,
+            Lose: 0,
+            Tie: 0,
+          }
+          let b;
+          let c;
+
+    </script>
+  </body>
+</html>
